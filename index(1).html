@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Manoj V — Commerce graduate with experience in personal loan operations at Bajaj Finance.">
+  <meta name="theme-color" content="#101827">
+  <title>Manoj V | Finance & Operations</title>
+  <style>
+    :root {
+      --ink: #101827; --muted: #637083; --accent: #c69a55; --paper: #f5f6f8;
+      --white: #fff; --line: #e7eaf0; --navy: #101827;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Inter, "Segoe UI", Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1100px, calc(100% - 40px)); margin: auto; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(16,24,39,.96); backdrop-filter: blur(12px); color: white; }
+    nav { min-height: 72px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { font-weight:800; letter-spacing:.08em; font-size:1rem; }
+    .brand span { color: var(--accent); }
+    .navlinks { display:flex; gap:26px; font-size:.88rem; color:#d6dce5; }
+    .navlinks a:hover { color: var(--accent); }
+    .hero { background: var(--navy); color:white; overflow:hidden; position:relative; }
+    .hero:after { content:""; position:absolute; width:520px; height:520px; border:1px solid rgba(198,154,85,.2); border-radius:50%; right:-180px; top:-220px; box-shadow:0 0 0 55px rgba(198,154,85,.035), 0 0 0 110px rgba(198,154,85,.025); }
+    .hero-grid { min-height:570px; display:grid; grid-template-columns:1.25fr .75fr; align-items:center; gap:55px; padding-top:70px; padding-bottom:70px; position:relative; z-index:1; }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.19em; font-size:.75rem; font-weight:800; }
+    h1 { font-size:clamp(3rem, 7vw, 5.4rem); line-height:1.02; letter-spacing:-.055em; margin:18px 0; }
+    h1 span { color:var(--accent); }
+    .hero p { color:#c4ccd8; max-width:560px; font-size:1.08rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:13px; margin-top:30px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 20px; border-radius:6px; font-weight:700; font-size:.9rem; transition:.2s; }
+    .primary { background:var(--accent); color:#111827; }
+    .primary:hover { background:#d9b77e; transform:translateY(-2px); }
+    .secondary { border:1px solid #657083; color:white; }
+    .secondary:hover { border-color:var(--accent); color:var(--accent); }
+    .portrait-wrap { justify-self:end; width:min(320px,100%); position:relative; }
+    .portrait-frame { padding:10px; border:1px solid rgba(198,154,85,.6); border-radius:160px 160px 18px 18px; }
+    .portrait { width:100%; aspect-ratio:3/4; object-fit:cover; display:block; border-radius:150px 150px 12px 12px; background:#e8e8e8; }
+    .portrait-note { text-align:center; color:#aeb8c6; font-size:.8rem; margin-top:15px; letter-spacing:.08em; text-transform:uppercase; }
+    .quickfacts { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:-1px; }
+    .fact { background:white; padding:24px; text-align:center; }
+    .fact strong { display:block; font-size:1.5rem; color:var(--ink); }
+    .fact span { color:var(--muted); font-size:.8rem; }
+    section { padding:88px 0; }
+    .section-head { margin-bottom:34px; }
+    .kicker { color:var(--accent); text-transform:uppercase; font-weight:800; font-size:.72rem; letter-spacing:.18em; }
+    h2 { font-size:clamp(2rem,4vw,2.8rem); letter-spacing:-.04em; line-height:1.12; margin:10px 0 0; }
+    .intro { color:var(--muted); max-width:720px; margin-top:16px; }
+    .about-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:55px; align-items:start; }
+    .about-card { background:var(--navy); color:white; border-radius:12px; padding:30px; }
+    .about-card .big { font-size:2.4rem; color:var(--accent); font-weight:800; line-height:1; }
+    .about-card p { color:#c4ccd8; margin-bottom:0; }
+    .about-copy p { color:var(--muted); margin-top:0; }
+    .section-soft { background:#fff; }
+    .experience { border-left:2px solid var(--accent); padding:4px 0 4px 27px; position:relative; max-width:850px; }
+    .experience:before { content:""; position:absolute; left:-7px; top:8px; width:12px; height:12px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 5px #f5ead9; }
+    .experience h3 { font-size:1.35rem; margin:0; }
+    .meta { color:var(--accent); font-weight:700; font-size:.86rem; margin:5px 0 18px; }
+    ul.clean { padding-left:19px; color:var(--muted); }
+    ul.clean li { padding:5px 0; }
+    .skills { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .skill { background:white; border:1px solid var(--line); padding:18px 19px; border-radius:8px; font-weight:650; }
+    .skill:before { content:"✦"; color:var(--accent); margin-right:10px; }
+    .education-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .info-card { background:white; padding:25px; border:1px solid var(--line); border-radius:10px; }
+    .info-card h3 { margin:0 0 8px; }
+    .info-card p { margin:0; color:var(--muted); }
+    .contact { background:var(--navy); color:white; }
+    .contact .intro { color:#c4ccd8; }
+    .contact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:35px; }
+    .contact-item { border:1px solid #344052; border-radius:8px; padding:20px; }
+    .contact-item small { display:block; color:var(--accent); text-transform:uppercase; letter-spacing:.13em; font-size:.68rem; font-weight:800; margin-bottom:8px; }
+    .contact-item a, .contact-item span { overflow-wrap:anywhere; }
+    footer { background:#0b111c; color:#9ba6b5; padding:22px 0; font-size:.82rem; }
+    footer .wrap { display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; }
+    @media(max-width:760px) {
+      .navlinks { gap:13px; font-size:.78rem; }
+      .hero-grid { grid-template-columns:1fr; text-align:center; gap:35px; padding-top:55px; }
+      .hero p { margin-left:auto; margin-right:auto; }
+      .actions { justify-content:center; }
+      .portrait-wrap { justify-self:center; width:245px; }
+      .quickfacts { grid-template-columns:1fr; }
+      .fact { padding:17px; }
+      section { padding:65px 0; }
+      .about-grid, .education-grid { grid-template-columns:1fr; gap:22px; }
+      .skills { grid-template-columns:1fr 1fr; }
+      .contact-grid { grid-template-columns:1fr; }
+    }
+    @media(max-width:430px) {
+      .wrap { width:min(100% - 28px, 1100px); }
+      .navlinks { gap:9px; }
+      .navlinks a { font-size:.7rem; }
+      .brand { font-size:.85rem; }
+      .skills { grid-template-columns:1fr; }
+      h1 { font-size:3.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#home">MANOJ <span>V.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" style="padding:0">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Finance · Customer Support · Operations</div>
+          <h1>Hello, I'm<br><span>Manoj V.</span></h1>
+          <p>Commerce graduate with hands-on experience in the Personal Loan Department at Bajaj Finance. Interested in financial services, customer support and accurate loan operations.</p>
+          <div class="actions">
+            <a class="btn primary" href="#contact">Get in touch</a>
+            <a class="btn secondary" href="#experience">View experience</a>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <div class="portrait-frame"><img class="portrait" src="assets/profile.jpeg" alt="Portrait of Manoj V"></div>
+          <div class="portrait-note">Professional profile</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap quickfacts">
+      <div class="fact"><strong>6 Months</strong><span>Finance experience</span></div>
+      <div class="fact"><strong>B.Com</strong><span>Commerce graduate</span></div>
+      <div class="fact"><strong>5</strong><span>Languages</span></div>
+    </div>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="section-head">
+          <div class="kicker">A little about me</div>
+          <h2>Building a strong foundation in finance.</h2>
+        </div>
+        <div class="about-copy">
+          <p>I am a Commerce graduate with six months of experience in the Personal Loan Department at Bajaj Finance. I have developed a foundational understanding of financial services, loan documentation, customer support and basic financial operations.</p>
+          <p>I am proficient in MS Excel, MS Word and Microsoft Office. I bring numerical, analytical, organizational and problem-solving skills, along with attention to detail, teamwork and a willingness to learn.</p>
+          <div class="about-card">
+            <div class="big">01</div>
+            <h3>My professional focus</h3>
+            <p>Contribute to a finance team through careful documentation, responsive customer support and a commitment to continuous professional development.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft" id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Career journey</div>
+          <h2>Professional experience</h2>
+          <p class="intro">Practical exposure to personal loan processing and customer support.</p>
+        </div>
+        <div class="experience">
+          <h3>Bajaj Finance</h3>
+          <div class="meta">Personal Loan Department · 6 months</div>
+          <ul class="clean">
+            <li>Assisted with personal loan application processing and documentation.</li>
+            <li>Supported customer queries related to personal loans and eligibility.</li>
+            <li>Helped verify customer documents and maintain accurate records.</li>
+            <li>Gained practical knowledge of loan processing and financial services.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">What I bring</div>
+          <h2>Core skills</h2>
+          <p class="intro">A combination of computer, analytical and interpersonal skills.</p>
+        </div>
+        <div class="skills">
+          <div class="skill">MS Excel & Microsoft Office</div>
+          <div class="skill">Basic computer applications</div>
+          <div class="skill">Numerical & analytical skills</div>
+          <div class="skill">Problem-solving</div>
+          <div class="skill">Communication & interpersonal skills</div>
+          <div class="skill">Organization & time management</div>
+          <div class="skill">Attention to detail</div>
+          <div class="skill">Teamwork & collaboration</div>
+          <div class="skill">Adaptability & willingness to learn</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft" id="education">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Background</div>
+          <h2>Education & more</h2>
+        </div>
+        <div class="education-grid">
+          <div class="info-card">
+            <h3>Bachelor of Commerce (B.Com)</h3>
+            <p>Dayananda Sagar College<br>Bangalore University</p>
+          </div>
+          <div class="info-card">
+            <h3>Achievement</h3>
+            <p>Secured 2nd place in a Hobli-level volleyball competition, demonstrating teamwork, discipline and collaboration.</p>
+          </div>
+          <div class="info-card">
+            <h3>Languages</h3>
+            <p>English · Hindi · Kannada · Telugu · Tamil</p>
+          </div>
+          <div class="info-card">
+            <h3>Interests</h3>
+            <p>Cricket</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="kicker">Let's connect</div>
+        <h2>Have an opportunity in mind?</h2>
+        <p class="intro">I would be glad to connect and discuss opportunities in finance, customer support and operations.</p>
+        <div class="contact-grid">
+          <div class="contact-item"><small>Email</small><a href="mailto:manojvrock.1234@gmail.com">manojvrock.1234@gmail.com</a></div>
+          <div class="contact-item"><small>Phone</small><a href="tel:+919844940583">+91 98449 40583</a></div>
+          <div class="contact-item"><small>Location</small><span>Bengaluru, Karnataka, India</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><span>© <span id="year"></span> Manoj V. All rights reserved.</span><span>Designed as a professional portfolio</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
